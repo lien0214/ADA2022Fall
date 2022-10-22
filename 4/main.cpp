@@ -8,7 +8,6 @@ struct Node {
     int i;
     ll freq;
     Node* left, * right;
-    
     Node(int i, ll freq): freq(freq), i(i), left(NULL), right(NULL) {}
 };
 bool freq_cmp(Node* lhs, Node* rhs)
@@ -66,7 +65,7 @@ int main()
     char code[MAXN][MAXL] = {};
     huffman_code(freq, N, code);
     for(int n = 0; n < N; n++) {
-        printf("%s\n", code[n]);
+        printf("%s\n", (N == 1) ? "0" : code[n]);
     }
     return 0;
 }
