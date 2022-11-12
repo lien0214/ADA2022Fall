@@ -1,0 +1,42 @@
+In file included from /usr/include/c++/9/bits/stl_algobase.h:71,
+                 from /usr/include/c++/9/bits/char_traits.h:39,
+                 from /usr/include/c++/9/ios:40,
+                 from /usr/include/c++/9/istream:38,
+                 from /usr/include/c++/9/sstream:38,
+                 from /usr/include/c++/9/complex:45,
+                 from /usr/include/c++/9/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54,
+                 from main.cpp:1:
+/usr/include/c++/9/bits/predefined_ops.h: In instantiation of ‘constexpr bool __gnu_cxx::__ops::_Iter_comp_iter<_Compare>::operator()(_Iterator1, _Iterator2) [with _Iterator1 = _edge*; _Iterator2 = _edge*; _Compare = bool (*)(_edge*, _edge*)]’:
+/usr/include/c++/9/bits/stl_algo.h:81:17:   required from ‘void std::__move_median_to_first(_Iterator, _Iterator, _Iterator, _Iterator, _Compare) [with _Iterator = _edge*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:1926:34:   required from ‘_RandomAccessIterator std::__unguarded_partition_pivot(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = _edge*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:1958:38:   required from ‘void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = _edge*; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:1973:25:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = _edge*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:4905:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = _edge*; _Compare = bool (*)(_edge*, _edge*)]’
+main.cpp:24:34:   required from here
+/usr/include/c++/9/bits/predefined_ops.h:143:18: error: cannot convert ‘_edge’ to ‘_edge*’ in argument passing
+  143 |         { return bool(_M_comp(*__it1, *__it2)); }
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/predefined_ops.h: In instantiation of ‘bool __gnu_cxx::__ops::_Val_comp_iter<_Compare>::operator()(_Value&, _Iterator) [with _Value = _edge; _Iterator = _edge*; _Compare = bool (*)(_edge*, _edge*)]’:
+/usr/include/c++/9/bits/stl_algo.h:1833:20:   required from ‘void std::__unguarded_linear_insert(_RandomAccessIterator, _Compare) [with _RandomAccessIterator = _edge*; _Compare = __gnu_cxx::__ops::_Val_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:1860:36:   required from ‘void std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = _edge*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:1890:25:   required from ‘void std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = _edge*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:1976:31:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = _edge*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:4905:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = _edge*; _Compare = bool (*)(_edge*, _edge*)]’
+main.cpp:24:34:   required from here
+/usr/include/c++/9/bits/predefined_ops.h:215:11: error: cannot convert ‘_edge’ to ‘_edge*’ in argument passing
+  215 |  { return bool(_M_comp(__val, *__it)); }
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/predefined_ops.h: In instantiation of ‘bool __gnu_cxx::__ops::_Iter_comp_val<_Compare>::operator()(_Iterator, _Value&) [with _Iterator = _edge*; _Value = _edge; _Compare = bool (*)(_edge*, _edge*)]’:
+/usr/include/c++/9/bits/stl_heap.h:133:48:   required from ‘void std::__push_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare&) [with _RandomAccessIterator = _edge*; _Distance = long int; _Tp = _edge; _Compare = __gnu_cxx::__ops::_Iter_comp_val<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_heap.h:237:23:   required from ‘void std::__adjust_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare) [with _RandomAccessIterator = _edge*; _Distance = long int; _Tp = _edge; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_heap.h:342:22:   required from ‘void std::__make_heap(_RandomAccessIterator, _RandomAccessIterator, _Compare&) [with _RandomAccessIterator = _edge*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:1677:23:   required from ‘void std::__heap_select(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = _edge*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:1938:25:   required from ‘void std::__partial_sort(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = _edge*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:1953:27:   required from ‘void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = _edge*; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:1973:25:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = _edge*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(_edge*, _edge*)>]’
+/usr/include/c++/9/bits/stl_algo.h:4905:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = _edge*; _Compare = bool (*)(_edge*, _edge*)]’
+main.cpp:24:34:   required from here
+/usr/include/c++/9/bits/predefined_ops.h:177:11: error: cannot convert ‘_edge’ to ‘_edge*’ in argument passing
+  177 |  { return bool(_M_comp(*__it, __val)); }
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
