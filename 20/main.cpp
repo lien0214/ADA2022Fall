@@ -18,7 +18,6 @@ bool w_cmp(node &lhs, node &rhs)
 {
     return lhs.w < rhs.w; 
 }
-
 node nodes[MAXM];
 int cnt;
 int i;
