@@ -12,7 +12,7 @@ vector<iPair> adj[MAXN];
 ll shortestPath(int src)
 {
 	priority_queue<iPair, vector<iPair>, greater<iPair>> pq;
-	vector<ll> dist(N, INF);
+	vector<ll> dist(N + 1, INF);
 	pq.push(make_pair(0, src));
 	dist[src] = 0;
 	while (!pq.empty()) {
@@ -32,10 +32,10 @@ ll shortestPath(int src)
 	}
     ll ret = 0;
     for(int i = 1; i <= N; i++) {
+        //cout << i << " " << dist[i] << "\n";
         ret += dist[i];
     }
-    cout << ret << "\n";
-    perror("cout ret");
+    //cout << ret << "\n";
     return ret;
 }
 
@@ -53,10 +53,8 @@ int main()
     ll curr;
     for(int n = 2; n <= N; n++) {
         adj[1].push_back(make_pair(n, 0));
-        perror("function");
         curr = shortestPath(1);
-        perror("function return");
-        ret = (ret < curr) ? curr : ret;
+        ret = (ret < curr) ? ret : curr;
         adj[1].pop_back();
     }
     cout << ret << "\n";
